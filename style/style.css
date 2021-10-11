@@ -1,0 +1,248 @@
+@import url('https://fonts.googleapis.com/css2?family=Aclonica&family=Poppins:wght@300&family=Raleway&display=swap');
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+a {
+  text-decoration: none;
+}
+body {
+  background: #e7e9fe;
+}
+input:focus {
+  outline: none;
+}
+.back {
+  position: absolute;
+  top: 13%;
+  left: 5%;
+}
+/* utility classes */
+.aclonica {
+  font-family: 'Aclonica', sans-serif;
+}
+.poppins {
+  font-family: 'Poppins', sans-serif;
+}
+.raleway {
+  font-family: 'Raleway', sans-serif;
+}
+.fs-7 {
+  font-size: 12px;
+}
+
+nav {
+  background: rgb(50, 50, 175);
+}
+.navBtn a {
+  font-size: 14px;
+}
+.searchBar {
+  position: relative;
+}
+.searchInput {
+  width: 370px;
+  padding: 0.2rem 2rem;
+  background: rgb(61, 61, 216);
+  border: none;
+  color: #fff;
+}
+.searchIcon {
+  position: absolute;
+  left: 92%;
+  top: 25%;
+}
+.bg-faded {
+  background: #e7e9f0;
+}
+.fa-bars {
+  display: none;
+}
+.btn-blue {
+  background: rgb(50, 50, 175);
+  color: #fff;
+  border: 1px solid #fff;
+}
+.btn-white {
+  padding: 0.5rem 1rem;
+  background: transparent;
+  color: #333;
+  border: 1px solid #888;
+}
+.freightBtn {
+  position: relative;
+  width: 45%;
+  padding: 1rem;
+  box-sizing: border-box;
+}
+.serviceBtn {
+  position: relative;
+  border: 1px solid #888;
+  padding: 0.6rem 4rem 1.8rem 0.4rem;
+  border-radius: 10px;
+  overflow: hidden;
+  font-size: 14px;
+}
+.freight {
+  position: absolute;
+  top: 40%;
+  left: 40%;
+  width: 7%;
+  transform: scale(7);
+  z-index: 2;
+  opacity: 0;
+}
+.icons {
+  font-size: 3.5rem;
+  position: absolute;
+  top: 23%;
+  left: 81%;
+  color: #888;
+}
+#airFreight:checked + .serviceBtn,
+#seaFreight:checked + .serviceBtn,
+#inland:checked + .serviceBtn,
+#customs:checked + .serviceBtn {
+  background: rgb(50, 50, 175);
+  color: white;
+}
+#airFreight:checked + .serviceBtn .icons,
+#seaFreight:checked + .serviceBtn .icons,
+#inland:checked + .serviceBtn .icons,
+#customs:checked + .serviceBtn .icons {
+  color: white;
+}
+
+/* import/export section */
+.importInput {
+  position: relative;
+}
+.importInput input {
+  width: 350px;
+  padding: 0.4rem 3rem;
+  margin-top: 2.7rem;
+  background: #e7e9f0;
+  border: 1px solid #e7e9fe;
+  border-radius: 10px;
+}
+.importInput span .place,
+.importInput span .place2 {
+  position: absolute;
+  top: 60%;
+  left: 5%;
+}
+.importInput span .place2 {
+  left: 55%;
+}
+.options input,
+.options select {
+  width: 30%;
+  background: #e7e9f0;
+  border: none;
+  color: #444;
+  padding: 0.5rem 1rem;
+  border-radius: 10px;
+}
+.toggler {
+  position: relative;
+}
+.toggler1 {
+  position: absolute;
+  top: 5%;
+  left: 5%;
+  transform: scale(3);
+  opacity: 0;
+  z-index: 2;
+}
+.on,
+.iconon {
+  display: none;
+  color: rgb(50, 50, 175);
+}
+.span1 {
+  border-radius: 5px;
+  margin-left: 0.3rem;
+}
+.quantity div {
+  position: relative;
+}
+.quantity div label {
+  position: absolute;
+  top: -27%;
+  left: 10%;
+}
+.quantity div input::placeholder {
+  text-align: right;
+  padding: 0 0.5rem;
+}
+.extra {
+  display: relative;
+}
+.content {
+  width: 450px;
+  padding: 0.2rem;
+}
+
+#check {
+  position: absolute;
+  transform: scale(5);
+  opacity: 0;
+}
+#check:checked + div > .off {
+  display: none;
+}
+#check:checked ~ div > .on {
+  display: block;
+}
+
+@media screen and (max-width: 450px) {
+  .fa-bars {
+    display: block;
+  }
+  .freightBtn {
+    width: 100%;
+  }
+  .importInput input {
+    width: 330px;
+    padding: 0.4rem 3rem;
+    margin-top: 1.5rem;
+    background: #e7e9f0;
+    border: 1px solid #e7e9fe;
+    border-radius: 10px;
+  }
+  .importInput span .place {
+    top: 81%;
+    left: 5%;
+  }
+  .importInput span .place2 {
+    top: 33%;
+    left: 5%;
+  }
+  .options input,
+  .options select {
+    width: 100%;
+    margin: 0.5rem;
+  }
+  .span1 {
+    display: block;
+    width: 300px;
+    padding: 0.3;
+    margin: auto;
+    margin-bottom: 1rem;
+  }
+  .span2 {
+    text-align: right;
+  }
+  .rounded {
+    width: 300px;
+  }
+  .searchIcon,
+  .navBtn a,
+  .searchInput,
+  .back {
+    display: none;
+  }
+}
